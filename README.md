@@ -1,1 +1,1 @@
-# ornl_workflow
+# Scripts to generate proper workflow @ titan
