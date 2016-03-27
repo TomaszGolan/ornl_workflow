@@ -9,9 +9,9 @@ def create_dir(path, tag):
 
 def create_dirs(args):
     """ create dirs if needed """
-    create_dir(args.framework_dir, args.tag)
-    create_dir(args.software_dir, args.tag)
-    create_dir(args.data_dir, args.tag)
+    if not os.path.exists (args.framework_dir): os.makedirs (args.framework_dir)
+    if not os.path.exists (args.data_dir): os.makedirs (args.data_dir)
+    create_dir(args.software_dir, args.tag)    
     create_dir(args.log_dir, args.tag)
     create_dir(args.output_dir, args.tag)
 
