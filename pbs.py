@@ -78,7 +78,7 @@ def run_job (args, put):
 
     print >> f, "\n### RUN A JOB ###\n"
 
-    print >> f, "cd " + args.software_dir
+    print >> f, "cd " + args.software_dir + "/" + args.tag
     print >> f, "aprun " + args.command
 
     if args.no_archive:
