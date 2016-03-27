@@ -15,7 +15,7 @@ if __name__ == "__main__":
     print "\n------ GENERATED WORKFLOW SUMMARY ------\n"
     print "Start with:  qsub -q dtn   " + load_script
     print "Which calls: qsub -q titan " + run_script
-    print "Which calls: qsub -q dtn   " + save_script
+    if args.no_archive: print "Which calls: qsub -q dtn   " + save_script
     print "\nTemporary Lustre folders:"
     print "  -framework:\t" + args.framework_dir
     print "  -data:\t" + args.data_dir
