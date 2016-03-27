@@ -29,7 +29,7 @@ INPUT FILES / SOFTWARE:
                         )
   --software_list [/path1/software.list]
                         path to a file contains all required software
-                        (default: /data/Dokumenty/ornl_workflow/software.list)
+                        (default: `pwd`/software.list)
 
 EXTRA OPTIONS:
   --tag [tag]           tag used for logs and output files names (default:
