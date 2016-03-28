@@ -74,8 +74,8 @@ def run_job (args, put):
         # setup libs
         print >> f, "module load cudatoolkit"
         print >> f, "export PATH=" + args.framework_dir + "/anaconda2/bin/:$PATH"
+        print >> f, "export PYTHONPATH=" + args.software_dir + "/" + args.tag
         print >> f, "export THEANO_FLAGS='device=gpu,floatX=float32,compiledir=" + theanoLog + "'"
-
     print >> f, "\n### RUN A JOB ###\n"
 
     print >> f, "cd " + args.software_dir + "/" + args.tag
