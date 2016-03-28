@@ -73,7 +73,7 @@ def run_job (args, put):
         if not os.path.exists (theanoLog): os.makedirs (theanoLog)
         # setup libs
         print >> f, "module load cudatoolkit"
-        print >> f, "export PATH=" + args.framework_dir + "/anaconda2:$PATH"
+        print >> f, "export PATH=" + args.framework_dir + "/anaconda2/bin/:$PATH"
         print >> f, "export THEANO_FLAGS='device=gpu,floatX=float32,compiledir=" + theanoLog + "'"
 
     print >> f, "\n### RUN A JOB ###\n"
