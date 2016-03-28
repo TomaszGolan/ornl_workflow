@@ -108,7 +108,7 @@ def archive_result(args):
     print >> f, "hsi mkdir " + soft_path
     print >> f, "hsi mkdir " + out_path
 
-    sleep 60 # wait for run.pbs.out
+    print >> f, "sleep 60" # wait for run.pbs.out
 
     print >> f, "\n### ARCHIVE ALL ###\n"
 
