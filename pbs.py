@@ -108,15 +108,17 @@ def archive_result(args):
     print >> f, "hsi mkdir " + soft_path
     print >> f, "hsi mkdir " + out_path
 
+    sleep 60 # wait for run.pbs.out
+
     print >> f, "\n### ARCHIVE ALL ###\n"
 
     print >> f, "cd " + args.log_dir + '/' + args.tag
-    print >> f, 'hsi "cd ' + log_path + '; put *"'
+    print >> f, 'hsi "cd ' + log_path + '; put -R *"'
 
     print >> f, "cd " + args.software_dir + '/' + args.tag
-    print >> f, 'hsi "cd ' + soft_path + '; put *"'
+    print >> f, 'hsi "cd ' + soft_path + '; put -R *"'
 
     print >> f, "cd " + args.output_dir + '/' + args.tag
-    print >> f, 'hsi "cd ' + out_path + '; put *"'
+    print >> f, 'hsi "cd ' + out_path + '; put -R *"'
 
     return filename
