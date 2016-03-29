@@ -41,6 +41,13 @@ The High Performance Storage System (HPSS) provides tape storage for large amoun
 * **Purged** - Period of time, post-file-access, after which a file will be marked as eligible for permanent deletion.
 * **Retention** -	Period of time, post-account-deactivation or post-project-end, after which data will be marked as eligible for permanent deletion.
 
+**Notes:**
+
+* Access to archive areas (e.g., `/home/$USER`) is conducted with `hsi`, e.g.,
+
+      hsi ls /home/$USER
+
+
 # Example workflow
 
 ## Copy input files (using dtn) and call titan job
