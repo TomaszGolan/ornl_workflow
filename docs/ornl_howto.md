@@ -141,6 +141,16 @@ On Cray machines, when the aprun command is issued within a job script (or on th
 
 *Only User Work (Lustre®) and Project Work (Lustre®) storage areas are available to compute nodes on OLCF Cray systems. Other storage spaces (User Home, User Archive, Project Home, and Project Archive) are not mounted on compute nodes.*
 
+# Walltime vs nodes (titan)
+
+| Bin	| Min Nodes	| Max	Nodes	|	Max	Walltime (Hours)	|	Aging Boost (Days)
+|:-:|:-:|:-:|:-:|:-:|
+| 1 |	11,250 |	-- |	24.0 |	15 |
+| 2 |	3,750 |	11,249 |	24.0 |	5 |
+| 3 |	313	| 3,749 |	12.0 | 0 |
+| 4 |	126 |	312 |	6.0 |	0 |
+| 5 |	1 |	125 |	2.0 |	0 |
+
 # Work in progress notes
 
 ## Copying file to HPSS
