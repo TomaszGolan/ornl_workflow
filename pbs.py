@@ -61,7 +61,8 @@ def run_job (args, put):
 
     print >> f, "### PBS DIRECTIVES ###\n"
     print >> f, "#PBS -A hep105"
-    print >> f, "#PBS -l nodes=1,walltime=2:00:00" # TODO 3750,walltime=24:00:00" # min nodes for day job
+    print >> f, "#PBS -l nodes=1,walltime=2:00:00"     # max walltime for 1 node
+    #TODO print >> f, "#PBS -l nodes=3750,walltime=24:00:00" # min nodes for day job
     print >> f, "#PBS -j oe"                           # merge out and err
     print >> f, "#PBS -o " + filename + ".out"         # load files log
 
